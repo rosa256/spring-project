@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title - Theamleaf</title>
+</head>
+<body>
+    <form method="POST" action="/addStudent" >
+        <table>
+            <tr>
+                <td><label th:name="name">Name</label></td>
+                <td><input name="name"/></td>
+            </tr>
+
+            <tr>
+                <td><label th:name="surname">
+                    Surname</label></td>
+                <td><input name="surname"/></td>
+            </tr>
+
+            <tr>
+                <td><label th:name="age">Age</label></td>
+                <td><input name="age"/></td>
+            </tr>
+
+            <tr>
+                <td><input th:type="submit" value="Submit"/></td>
+            </tr>
+        </table>
+    </form>
+
+    <form th:method="get" action="/index">
+        <button type="submit"> Back</button>
+    </form>
+</body>
+</html>
