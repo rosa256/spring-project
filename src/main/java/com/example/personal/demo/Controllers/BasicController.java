@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class BasicController {
@@ -28,6 +29,12 @@ public class BasicController {
     public String testThymeleafView() {
 
         return "th_index";
+    }
+
+    @RequestMapping(value = "/hello")
+    @ResponseBody
+    public String getHello(){
+        return "Hello WhiteStock!";
     }
 
 }
